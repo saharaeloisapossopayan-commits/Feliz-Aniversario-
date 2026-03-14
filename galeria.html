@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Para el Amor de mi Vida ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-fuerte: #ff4d8d;
+            --rosa-brillante: #ff85b2;
+            --rosa-claro: #ffeef4;
+            --blanco: #ffffff;
+            --neon-glow: 0 0 25px rgba(255, 77, 141, 0.7);
+        }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: radial-gradient(circle at center, #fff0f6 0%, #ffcce6 100%);
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* LUCES DE FONDO ROSAS */
+        .light-blur {
+            position: fixed;
+            width: 450px; height: 450px;
+            background: var(--rosa-fuerte);
+            filter: blur(180px);
+            border-radius: 50%;
+            z-index: 0; opacity: 0.25;
+            animation: moveLights 12s infinite alternate;
+        }
+        @keyframes moveLights {
+            from { transform: translate(-40%, -40%); }
+            to { transform: translate(40%, 40%); }
+        }
+
+        /* LLUVIA DE FLORES Y BRILLOS */
+        .decor {
+            position: fixed; pointer-events: none; z-index: 5;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
+        .container {
+            position: relative; z-index: 10;
+            width: 90%; max-width: 850px;
+            text-align: center; padding: 50px 0;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: var(--rosa-fuerte);
+            font-size: 3.8rem;
+            margin-bottom: 40px;
+            text-shadow: 3px 3px 0px #fff, var(--neon-glow);
+        }
+
+        /* MENSAJE ROMÁNTICO */
+        .carta-amor {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 45px;
+            border-radius: 50px;
+            border: 6px solid var(--rosa-fuerte);
+            box-shadow: 0 20px 50px rgba(255, 77, 141, 0.3);
+            margin-bottom: 60px;
+            text-align: justify;
+            line-height: 1.9;
+            color: #444;
+            font-size: 1.2rem;
+            animation: fadeIn 2s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; } }
+
+        /* GALERÍA */
+        .grid-media {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .item-media {
+            background: white;
+            padding: 12px;
+            border-radius: 30px;
+            border: 4px solid white;
+            cursor: pointer;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(255, 77, 141, 0.15);
+        }
+        .item-media:hover {
+            transform: scale(1.1) rotate(2deg);
+            border-color: var(--rosa-fuerte);
+            box-shadow: var(--neon-glow);
+        }
+
+        .item-media img, .item-video-placeholder {
+            width: 100%; height: 200px;
+            object-fit: cover; border-radius: 20px;
+        }
+
+        .item-video-placeholder {
+            background: var(--rosa-claro);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            font-size: 3.5rem; color: var(--rosa-fuerte);
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 192, 215, 0.85);
+            backdrop-filter: blur(15px);
+            z-index: 2000; justify-content: center; align-items: center;
+        }
+        .modal-content {
+            max-width: 85%; max-height: 80%;
+            border: 10px solid white; border-radius: 35px;
+            box-shadow: 0 0 50px rgba(255, 77, 141, 0.6);
+        }
+        .video-modal { width: 85%; max-width: 800px; }
+
+        .btn-juego {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--rosa-fuerte), var(--rosa-brillante));
+            color: white; padding: 22px 60px;
+            border-radius: 60px; font-family: 'Pacifico';
+            font-size: 2.2rem; text-decoration: none;
+            border: 5px solid white; margin-top: 50px;
+            box-shadow: 0 12px 30px rgba(255, 77, 141, 0.4);
+            transition: 0.3s;
+        }
+        .btn-juego:hover { transform: scale(1.1); box-shadow: var(--neon-glow); }
+
+    </style>
+</head>
+<body>
+
+    <div class="light-blur" style="top: 5%; left: 5%;"></div>
+    <div class="light-blur" style="bottom: 5%; right: 5%;"></div>
+
+    <div class="container">
+        <h1>🌸 Eres mi Todo 🌸</h1>
+
+        <div class="carta-amor">
+            <p>
+                <b>Amor de mi vida:</b> 
+                Hice esta página solo para ti porque quería que tuvieras algo tan único y especial como lo eres tú en mi mundo. Desde aquel primer día en que me hice tu novia, supe que mi vida nunca volvería a ser la misma; encontré en tus ojos mi refugio favorito y en tu sonrisa el motivo de mis alegrías. 
+                <br><br>
+                Decidí crear este pequeño espacio para que siempre puedas venir aquí y recordar cuánto te amo, lo mucho que valoro cada momento a tu lado y la profunda admiración que siento por el hombre increíble que eres. Eres mi compañero, mi mejor amigo y el dueño de mi corazón. Gracias por este año lleno de magia, por cuidarme y por elegirme cada día. <b>¡Te amo infinitamente y por siempre! 🌹✨</b>
+            </p>
+        </div>
+
+        <div class="grid-media">
+            <div class="item-media" onclick="abrirMedia('img', 'foto1.jpg')">
+                <img src="cancion/papis.jpeg" alt="Nuestro amor">
+            </div>
+
+            <div class="item-media" onclick="abrirMedia('img', 'foto2.jpg')">
+                <img src="foto2.jpg" alt="Recuerdo">
+            </div>
+            
+            <div class="item-media" onclick="abrirMedia('video', 'video_amor.mp4')">
+                <div class="item-video-placeholder">
+                    🎥
+                    <span style="font-size: 1rem; font-family: 'Quicksand'; font-weight: 700;">VER VIDEO</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="juego.html" class="btn-juego">¡Click para Jugar!💖</a>
+    </div>
+
+    <div id="modal" class="modal" onclick="cerrar()">
+        <div id="contenido"></div>
+    </div>
+
+    <script>
+        // Lluvia de Flores y Brillos
+        function crearDeco() {
+            const flores = ['🌸', '🌹', '✨', '💕', '💖', '🌷', '🌺'];
+            setInterval(() => {
+                const f = document.createElement('div');
+                f.className = 'decor';
+                f.innerHTML = flores[Math.floor(Math.random() * flores.length)];
+                f.style.left = Math.random() * 100 + "vw";
+                f.style.fontSize = (Math.random() * 25 + 20) + "px";
+                f.style.animationDuration = (Math.random() * 4 + 4) + "s";
+                document.body.appendChild(f);
+                setTimeout(() => f.remove(), 8000);
+            }, 300);
+        }
+        crearDeco();
+
+        // Funciones para Ampliar
+        function abrirMedia(tipo, src) {
+            const modal = document.getElementById('modal');
+            const contenido = document.getElementById('contenido');
+            
+            if (tipo === 'img') {
+                contenido.innerHTML = `<img src="${src}" class="modal-content">`;
+            } else {
+                contenido.innerHTML = `
+                    <video controls autoplay class="modal-content video-modal">
+                        <source src="${src}" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>`;
+            }
+            modal.style.display = 'flex';
+        }
+
+        function cerrar() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('contenido').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
